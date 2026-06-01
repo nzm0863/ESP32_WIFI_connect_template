@@ -1,3 +1,4 @@
+#pragma once
 #include <Arduino.h>
 #include <WiFi.h>
 #include "wifi_manager.h"
