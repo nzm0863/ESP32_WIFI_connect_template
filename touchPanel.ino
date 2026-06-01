@@ -1,11 +1,9 @@
-  #include <WiFi.h>
-
   #include <SPI.h>
   #include <XPT2046_Touchscreen.h>
   #include <Adafruit_GFX.h>
   #include <Adafruit_ILI9341.h>
-  #include "wifi_config.h"
   #include "pins.h"
+  #include "wifi_manager.h"
 
 
   Adafruit_ILI9341 tft(TFT_CS, TFT_DC, TFT_RST);
@@ -14,15 +12,7 @@
 
   void setup() {
     Serial.begin(115200);
-
-    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-
-    while (WiFi.status() != WL_CONNECTED) {
-      Serial.print(".");
-      delay(500);
-    }
-
-    Serial.println("WiFi Connected!");
+    wifiConnect();
 
     tft.begin();
     tft.setRotation(1);
