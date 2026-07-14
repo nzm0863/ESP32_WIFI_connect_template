@@ -24,6 +24,9 @@ const char* password = "YOUR_PASSWORD";
 
 接続に成功するとIPアドレスが表示されます。
 
+## 紹介動画
+https://youtube.com/shorts/zqNgp7YTBe8?feature=share
+
 ## 注意
 
 `wifi_config.h` は `.gitignore` に登録しているため、GitHubにはアップロードされません。
